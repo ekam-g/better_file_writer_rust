@@ -1,6 +1,5 @@
 //! Make files easier
 
-mod files;
 fn main() {
     make_folders("test/yes/cool/yes/farf".to_string()).expect("");
 }
