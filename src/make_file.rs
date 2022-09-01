@@ -4,11 +4,10 @@ pub fn make_dic(path: String) -> Result<(), Error> {
     let directory_error = fs::create_dir(&path);
     return match directory_error {
         Ok(_) => Ok(()),
-        Err(e) => {
+        Err(mut error) => {
             let mut success = false;
-            let full: String = path.replace("database/", "");
-            let where_file = full.split("/");
-            let mut location: String = "database/".to_string();
+            let where_file = path.split("/");
+            let mut location: String = "".to_string();
             for i in where_file {
                 location = location + i + "/";
                 let directory_error = fs::create_dir(&location);
@@ -16,13 +15,15 @@ pub fn make_dic(path: String) -> Result<(), Error> {
                     Ok(_) => {
                         success = true;
                     }
-                    Err(_) => {}
+                    Err(e) => {
+                        error = e;
+                    }
                 };
             }
             if success {
                 Ok(())
             } else {
-                Err(e)
+                Err(error)
             }
         }
     };
