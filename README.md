@@ -6,6 +6,6 @@ this package make many folders with one command, rather then using a loop and ca
 
 ```
 fn main() {
-    better_file_make::make_folders("test/yes/cool/yes/cool".to_string()).expect("");
+    better_file_maker::make_folders("test/yes/cool/yes/cool".to_string()).expect("");
 }
 ```
