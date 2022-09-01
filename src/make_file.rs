@@ -1,3 +1,12 @@
+/// Loops and creates directories where you want them
+///
+/// this will create multiple directories even if some/path does not exist.
+/// # Examples
+///
+/// ```
+/// make_dic("some/path/test".to_string()).expect("fail");
+///```
+///
 use std::{fs, io::Error};
 
 pub fn make_dic(path: String) -> Result<(), Error> {
