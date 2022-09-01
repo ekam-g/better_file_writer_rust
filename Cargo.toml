@@ -2,7 +2,7 @@
 name = "better_file_maker"
 version = "0.1.0"
 edition = "2021"
-discription = "a way to create many files with one command"
+description = "a way to create many files with one command"
 license = "MIT"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
