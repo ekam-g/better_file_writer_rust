@@ -11,7 +11,11 @@
 ///
 use std::{fs, io::Error};
 
-pub fn make_folders(path: String) -> Result<(), Error> {
+pub fn drop_make_folders(path: String) -> Result<(), Error> {
+    return make_folders(&path);
+}
+
+pub fn make_folders(path: &String) -> Result<(), Error> {
     let directory_error = fs::create_dir(&path);
     return match directory_error {
         Ok(_) => Ok(()),

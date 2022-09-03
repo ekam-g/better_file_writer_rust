@@ -6,6 +6,10 @@ this package make many folders with one command, rather then using a loop and ca
 
 ```
 fn main() {
-    better_file_maker::make_folders("test/yes/cool/yes/cool".to_string()).expect("");
+    let path = "yes/cool/somepath/makefile".to_string();
+    // use this one if you want to pass in a &String value
+    better_file_maker::make_folders(&path).expect("");
+    // use this one if you want to pass in a normal string value
+    better_file_maker::drop_make_folders(path).expect("");
 }
 ```

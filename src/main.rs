@@ -1,6 +1,8 @@
 //! Make files easier
 
 fn main() {
-    lib::make_folders("test/yes/cool/yes/farf".to_string()).expect("");
+    let path = "yes/cool/somepath/makefile".to_string();
+    better_file_maker::make_folders(&path).expect("");
+    better_file_maker::drop_make_folders(path).expect("");
 }
 pub mod lib;
