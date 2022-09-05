@@ -1,6 +1,6 @@
 [package]
 name = "better_file_maker"
-version = "0.1.4"
+version = "0.1.5"
 edition = "2021"
 description = "a way to create many files with one command"
 license = "MIT"

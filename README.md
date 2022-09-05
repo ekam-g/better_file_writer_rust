@@ -4,12 +4,26 @@ this package make many folders with one command, rather then using a loop and ca
 
 # How do i use it?
 
+## The loop through every slash and creates a new file and handles the errors
+
+To use a String value
+
 ```
 fn main() {
-    let path = "yes/cool/somepath/makefile".to_string();
-    // use this one if you want to pass in a &String value
-    better_file_maker::make_folders(&path).expect("");
-    // use this one if you want to pass in a normal string value
-    better_file_maker::drop_make_folders(path).expect("");
+    better_file_maker::drop_make_folders("yes/cool/somepath/makefile".to_string()).expect("");
 }
 ```
+
+To use a &String value
+
+```
+fn main() {
+    better_file_maker::drop_make_folders("yes/cool/somepath/makefile".to_string()).expect("");
+}
+```
+
+# What can cause an error?
+
+1. If the all of the folder exist it will throw an error.
+2. If the permissions where denied
+3. OS errors
