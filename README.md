@@ -18,7 +18,7 @@ To use a &String value
 
 ```
 fn main() {
-    better_file_maker::drop_make_folders("yes/cool/somepath/makefile".to_string()).expect("");
+    better_file_maker::make_folders(&"yes/cool/somepath/makefile".to_string()).expect("");
 }
 ```
 
