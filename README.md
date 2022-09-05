@@ -2,9 +2,12 @@
 
 this package make many folders with one command, rather then using a loop and causing an error.
 
-# How do i use it?
+# How does it work?
 
-## The loop through every slash and creates a new file and handles the errors
+The code loop through every slash and creates a new file and handles the errors, then returns the result.
+
+
+# How do i use it?
 
 To use a String value
 
