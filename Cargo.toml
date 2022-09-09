@@ -1,9 +1,12 @@
 [package]
 name = "better_file_maker"
-version = "0.1.7"
+version = "0.1.8"
 edition = "2021"
 description = "a way to create many files with one command"
 license = "MIT"
+repository = "https://github.com/carghai/better_file_writer_rust"
+homepage = "https://carghaiwebsite.web.app/#/"
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
