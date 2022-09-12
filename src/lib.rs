@@ -9,19 +9,16 @@
 ///
 ///```
 ///
-use std::{fs, io::Error};
+use std::{fmt::Display, fs, io::Error};
 
-pub fn drop_make_folders(path: String) -> Result<(), Error> {
-    return make_folders(&path);
-}
-
-pub fn make_folders(path: &String) -> Result<(), Error> {
-    let directory_error = fs::create_dir(&path);
+pub fn make_folders<T: Display>(path: T) -> Result<(), Error> {
+    let final_path = path.to_string();
+    let directory_error = fs::create_dir(&final_path);
     return match directory_error {
         Ok(_) => Ok(()),
         Err(mut error) => {
             let mut success = false;
-            let where_file = path.split("/");
+            let where_file = final_path.split("/");
             let mut location: String = "".to_string();
             for i in where_file {
                 location = location + i + "/";

@@ -6,18 +6,7 @@ this package make many folders with one command, rather then using a loop and ca
 
 The code loop through every slash and creates a new file and handles the errors, then returns the result.
 
-
 # How do i use it?
-
-To use a String value
-
-```
-fn main() {
-    better_file_maker::drop_make_folders("yes/cool/somepath/makefile".to_string()).expect("");
-}
-```
-
-To use a &String value
 
 ```
 fn main() {
